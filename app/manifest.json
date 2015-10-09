@@ -1,0 +1,73 @@
+{
+    "name": "__MSG_appName__",
+    "version": "0.9.227",
+    "manifest_version": 2,
+    "description": "__MSG_appDescription__",
+    "icons": {
+        "16": "images/icon-16.png",
+        "128": "images/icon-128.png"
+    },
+    "default_locale": "en",
+    "background": {
+        "page": "background.html"
+    },
+    "browser_action": {
+        "default_icon": {
+            "32": "images/icon-32.png",
+            "49": "images/icon-48.png"
+        },
+        "default_title": "Travis Buttons",
+        "default_popup": "popup.html"
+    },
+    "web_accessible_resources": [
+        "bower_components/jquery/jquery.min.js",
+        "scripts/main.js"
+    ],
+    "permissions": ["tabs", "https://*.travis-ci.com/*"],
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*.travis-ci.com/*",
+                "https://*.travis-ci.com/*"
+            ],
+            "css": [
+                "styles/main.css"
+            ],
+            "js": [
+                "bower_components/jquery/jquery.min.js",
+                "scripts/background.js",
+                "scripts/contentscript.js",
+                "scripts/main.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": false
+        }
+    ]
+}
+
+
+// {
+//     "name": "Highlight some phrases",
+//     "description": "Hightlight some pre defined text from websql database after page loads",
+//     "version": "0.1",
+//     "default_locale": "en",
+//     "permissions": [
+//     "tabs","<all_urls>"
+//     ],
+//     "browser_action": {
+//         "default_icon": "images/icon-32.png"
+//     },
+
+//     "content_scripts": [
+//         {
+//         "matches": [
+//             "http://*/*",
+//             "https://*/*"
+//             ],
+//         "js": ["scripts/contentscript.js"],
+//         "run_at": "document_end"         // pay attention to this line
+//         }
+//     ], 
+//     "manifest_version":2
+// }

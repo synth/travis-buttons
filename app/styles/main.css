@@ -1,0 +1,19 @@
+/* Will be compiled down to a single stylesheet with your sass files */
+
+html {
+    /* Defaults css for cssmin process */
+}
+
+body {
+	font-family: helvetica;
+	min-width: 480px;
+}
+
+
+#tb-bottom { 
+	background-color: #1C8068;
+}
+
+#tb-top { 
+	background-color: #3967D0;
+}

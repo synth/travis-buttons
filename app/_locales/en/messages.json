@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Travis Buttons",
+    "description": "Better buttons for TravisCI"
+  },
+  "appDescription": {
+    "message": "The buttons for log scrolling in Travis CI are terrible and inconvenient",
+    "description": "This makes it better"
+  }
+}
