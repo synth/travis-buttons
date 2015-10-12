@@ -23,13 +23,14 @@
         "bower_components/jquery/jquery.min.js",
         "scripts/main.js"
     ],
-    "permissions": ["tabs", "https://*.travis-ci.com/*"],
+    "permissions": ["tabs", "https://*.travis-ci.com/*", "https://*.travis-ci.org/*"],
     "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
     "content_scripts": [
         {
             "matches": [
                 "http://*.travis-ci.com/*",
-                "https://*.travis-ci.com/*"
+                "https://*.travis-ci.com/*",
+                "https://*.travis-ci.org/*"
             ],
             "css": [
                 "styles/main.css"
@@ -46,28 +47,3 @@
     ]
 }
 
-
-// {
-//     "name": "Highlight some phrases",
-//     "description": "Hightlight some pre defined text from websql database after page loads",
-//     "version": "0.1",
-//     "default_locale": "en",
-//     "permissions": [
-//     "tabs","<all_urls>"
-//     ],
-//     "browser_action": {
-//         "default_icon": "images/icon-32.png"
-//     },
-
-//     "content_scripts": [
-//         {
-//         "matches": [
-//             "http://*/*",
-//             "https://*/*"
-//             ],
-//         "js": ["scripts/contentscript.js"],
-//         "run_at": "document_end"         // pay attention to this line
-//         }
-//     ], 
-//     "manifest_version":2
-// }
