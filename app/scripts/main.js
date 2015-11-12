@@ -32,7 +32,11 @@ function loadButtons() {
       console.log('clicked to bottom');
       //window.Travis.tailing.start();
       // $(".log-tail").trigger('click');
-      $(".log-tail").click();
+      // $(".log-tail").click();
+      // $(".tail-status").css({display: "none"});
+      $(".tail-label").click();
+      // $(".tail-status").css({display: "inherit"});
+
     });
 
   } else if(!$(".log-tail")) {
